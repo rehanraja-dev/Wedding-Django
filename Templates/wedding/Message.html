@@ -1,0 +1,11 @@
+{% for message in messages %}
+<div id="message" class="alert-{{ message.tags }} alert-dismissible fade show message-css " style="display: flex; justify-content: space-between; padding: 30px 0px; background-color: rgb(183, 212, 223);"  role="alert">
+    <div style="display: flex; margin: 0px 20px;">
+        <strong style="color:rgb(3, 67, 92)">Message: </strong>
+        <p style="color:rgb(4, 79, 109);margin-left: 10px;">    {{ message }}</p>
+    </div>
+    <a href="" class="close"  style="margin:0px 20px; padding: 0px 20px; text-decoration: none;">
+        <img src="/Static/icons/close.png" alt="" class="image20">
+    </a>  
+</div>
+{% endfor %}

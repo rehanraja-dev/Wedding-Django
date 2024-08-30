@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Static/Css/style.css">
+    <link rel="stylesheet" href="/Static/Css/Cake_Place.css">
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	
+    
+</head>
+
+
+<body>
+
+    <header class="nav-bar">
+        <ul>
+
+            <div class="container-back">
+                <ul>
+                    <li id="arrow-icon"><a href="{% url 'birthday' %}"><img src="/Static/icons/left-arrow.png" alt="arrow-img"></a></li>
+                </ul>
+            </div>
+
+            <div class="contains-shop-user">
+                <ul>
+                    <li id="user-icon"><a href="{% url 'profile' %}"><img src="/Static/icons/user-img.png" alt="user-img"></a></li>
+                    <li id="shop-icon"><a href="{% url 'cart' %}"><img id="shop-icon" src="/Static/icons/shopping-bag.png" alt="shop-img"></a></li>
+                </ul>
+            </div>
+
+        </ul> 
+        
+    </header>
+
+    <div class="first-div-cp">
+
+        <div class="first-inner-div-1">
+            <h1>Delicious Cakes <br> For Everyone ...</h1>
+            <p>We offer you to experience true pleasure and joy from the taste of our desserts</p>
+            <button id="explore-button" onclick="move()">Explore Menu</button>
+            
+        </div>
+
+        <div class="first-inner-div-2">
+            <img id="pastery-img" src="/Static/Images/pastery.jpg" alt="pastery-img">
+        </div>
+        
+    </div>
+
+    <div class="second-div-cp">
+        <h3 id="h3-cp">Popular Cakes</h3>
+        <div class="popular-div">
+
+            <div class="card">
+                <img id="cake-img" src="/Static/Images/choco-cake.jpg" alt="chocolate-cake" style="width:100%">
+                <h1>Chocolate Cake</h1>
+                <p class="price">(₹300)</p>
+                <p><button>Add to Cart</button></p>
+            </div> 
+
+            <div class="card">
+                <img id="cake-img" src="/Static/Images/vanilla-cake.jpg" alt="vanilla-cake" style="width:100%">
+                <h1>Vanilla Cake</h1>
+                <p class="price">(₹350)</p>
+                <p><button>Add to Cart</button></p>
+            </div> 
+
+            <div class="card">
+                <img id="cake-img" src="/Static/Images/cheese-cake.jpg" alt="cheese-cake" style="width:100%">
+                <h1>Cheese Cake</h1>
+                <p class="price">(₹400)</p>
+                <p><button>Add to Cart</button></p>
+            </div> 
+
+            <div class="card">
+                <img id="cake-img" src="/Static/Images/carrot-cake.jpg" alt="carrot-ckae" style="width:100%">
+                <h1>Carrot Cake</h1>
+                <p class="price">(₹450)</p>
+                <p><button>Add to Cart</button></p>
+            </div> 
+
+        </div>
+    </div>
+
+
+
+    <footer class="footer-distributed">
+ 
+        <div class="footer-left">
+
+            <h3>Footer<span>Events</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                ·
+                <a href="#">About</a>
+                ·
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Delightful Events.</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Gandhi Nagar</span> Madhya Pradesh, India</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 999 9999999</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com" id="link-id">contact@DelightfulEvents.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Delightful_Events is a website for organizing events.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script>
+        function move(){
+            document.getElementById("explore-button").addEventListener("click", function(){
+            window.location.replace("{% url 'menu' %}");
+            });
+        }
+
+    </script>
+    
+</body>
+
+
+</html>

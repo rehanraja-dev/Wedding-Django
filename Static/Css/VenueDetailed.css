@@ -1,0 +1,169 @@
+.detailed-container {
+    margin: 50px 150;
+    display: flex;
+   
+}
+
+.details-container-col-1 {
+    max-width: 700px;
+    margin: 0px 30px 0px 0px;
+}
+
+.venued-img-div {
+    width: 700px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.venue-details-div {
+    height: 210px;
+    width: 650px;
+    background-color: white;
+    margin: -40px 0px 0px 20px;
+    position: relative;
+    box-shadow: 0px 1px 5px 0px rgb(176, 176, 176);
+    padding: 25px;
+}
+.venue-details-title
+{
+    font-size: 22px;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+.rating-div
+{
+ background-color: rgb(230 87 145);
+ padding: 10px;
+ align-items: center;
+ border-radius: 5px;
+ /* margin-bottom: 10px; */
+}
+.rating-p
+{
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.details-container-col-2 {
+    width: 450px;
+    min-width: 400px;
+}
+
+.price-division
+{
+    box-shadow: 0px 1px 5px 0px rgb(176, 176, 176);
+}
+.price-div-1 {
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.price-div-2 {
+    height: 100px;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.price-div-3 {
+    height: 50px;
+    background-color: white;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-div
+{
+    margin-top: 30px;
+    box-shadow: 0px 1px 5px 0px rgb(176, 176, 176);
+}
+.contact-div-1
+{
+    height: 90px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.email-div
+{
+    width: 180px;
+    display: flex;
+    background-color: rgb(223, 36, 111);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.email-div:hover
+{
+    background-color: rgb(247, 87, 151);
+    box-shadow: 0px 1px 5px 0px rgb(176, 176, 176);
+    transition: 1s;
+}
+.phone-div
+{
+    width: 180px;
+    display: flex;
+    background-color: rgb(3, 143, 12);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.phone-div:hover
+{
+    background-color: rgb(21, 186, 32);
+    box-shadow: 0px 1px 5px 0px rgb(176, 176, 176);
+    transition: 1s;
+}
+.addto-wishlist
+{
+    width: 180px;
+    display: flex;
+    background-color: rgb(223, 36, 111);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.contact-text
+{
+    font-size: 16px;
+    color: white;
+    margin-left: 5px;
+    font-weight: 500;
+}
+.flex
+{
+    display: flex;
+}
+.w-25{
+    width: 25%;
+}
+.border-l
+{
+    border-left: 5px solid white;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.detailed-footer
+{
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    justify-content: space-around;
+}
+.detailed-footer-p
+{
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-left: 10px;
+}

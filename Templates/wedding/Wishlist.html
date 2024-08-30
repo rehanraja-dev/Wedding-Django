@@ -1,0 +1,159 @@
+{% include "Header.html" %}
+
+{% include "Message.html" %}
+
+<div style="display: flex; justify-content: flex-end; margin-right: 150px; margin-top: 20PX;">
+    <p>WISHLIST PAGE</p>
+</div>
+
+<!-- VENUES -->
+<div class="venue-card-container">
+
+    <div class="venue-card-title">
+        <p class="venue-card-title-p">Wishlist Venues </p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{total_venue}} results as per your wishlist contains</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in venue_wish %}
+    <div class="venue-card">
+
+        <div class="venue-img-div">
+            <a href="{% url 'venueDtls' i.venue_id %}">
+                <img src="{{i.venue.venue_image.url}}" alt="venue image" class="img100 venue-img">
+            </a>
+        </div>
+    
+        <div class="place-review">
+            <p class="venue-name">{{i.venue.venue_name}}</p>
+    
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+    
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.venue.state}}</p>
+            </div>
+    
+            <div class="type-div">
+                <img class="image20 margin-right-10" src="/Static/icons/building.png" alt="property-img">
+                <p>{{i.venue.Venue_Type.venue_type}}</p>
+            </div>
+        </div>
+
+        <div class="delete-div jc-fe">
+            <a href="{% url 'removevenue_towish' i.venue_id %}" class="delete-link">
+                <img src="/Static/icons/delete-red.png" alt="delete-icon" class="image20">
+            </a>
+        </div>
+    
+    </div>
+    {% endfor %}
+</div>
+
+<!-- VENDERS -->
+<div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Wishlist Venders</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{total_vender}} results as per your wishlist contains</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in vender_wish %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id%}">
+                <img src="{{i.vender.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.vender.state}}</p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+        </div>
+
+        
+        <div class="delete-div jc-fe">
+            <a href="{% url 'removevender_towish' i.vender_id %}" class="delete-link">
+                <img src="/Static/icons/delete-red.png" alt="delete-icon" class="image20">
+            </a>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!-- CAKES -->
+<div class="vender-card-container" >
+
+    <div class="cake-card-copy">
+        <p class="venue-card-title-p">Wedding Cakes</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{total_cake}} results of black forest
+        </p>
+    </div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+
+    {% for i in cake_wish %}
+    <div class="cake-card">
+
+        <div class="cake-img-div">
+            <a href="{% url 'cakeDtls' i.cake_id %}">
+                <img src="{{i.cake.image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.cake.cake_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.cake.provider.city}}, {{i.cake.provider.state}}</p>
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
+        <div class="delete-div jc-fe">
+            <a href="{% url 'removecake_towish' i.cake_id %}" class="delete-link">
+                <img src="/Static/icons/delete-red.png" alt="delete-icon" class="image20">
+            </a>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+{% include "Footer.html" %}

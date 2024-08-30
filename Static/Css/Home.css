@@ -1,0 +1,129 @@
+.HOME-IMAGES {
+    background-image: url('https://images.pexels.com/photos/169185/pexels-photo-169185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.title-div {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wedding-title {
+    color: white;
+    font-weight: bold;
+    font-size: 40;
+    text-align: center;
+    padding-top: 10%;
+}
+
+/* SEARCH BOX CSS*/
+.search-div {
+    height: 50px;
+    width: 550px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    min-width: 200px;
+    width: 500px;
+    height: 50px;
+    border: 0px;
+    text-align: center;
+}
+.search-input:focus
+{
+    outline: none;
+    border: 0px;
+}
+.search-button
+{
+    border: 0px;
+}
+.search-btn-img
+{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+/* CLOSE */
+
+/* .search-icon-image {
+    width: 30px;
+    height: 30px;
+}
+
+.downarrow-icon-image {
+    width: 20px;
+    height: 20px;
+}
+
+.close-icon-image {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.search-icon {
+    background-color: #f2f2f2;
+    padding: 10px;
+    height: 50px;
+    width: 60px;
+}
+
+.downarrow-icon-div {
+    background-color: #f2f2f2;
+    padding: 10px;
+    height: 50px;
+    width: 60px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+*/
+
+/* SEARCH SUGGETION BOX CSS */
+.search-dropdown {
+    width: 37%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+}
+
+.search-drop-div {
+    width: 33.33%;
+    padding: 20px;
+    display: block;
+}
+
+.search-div-title {
+    font-weight: 600;
+}
+
+.search-item-div {
+    margin-top: 10px;
+}
+
+.search-link {
+    text-decoration: none;
+    color: gray;
+    font-size: 14;
+}
+
+.search-link:hover {
+    color: black;
+}
+
+.bc-white {
+    background-color: white;
+}
+
+.dis-block {
+    display: block;
+}

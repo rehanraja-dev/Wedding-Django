@@ -1,0 +1,61 @@
+{% include 'Header.html' %}
+
+<!--Message-->
+{% include "Message.html" %}
+
+<!--Sign in content section-->
+<div class="form-container">
+
+    <div class="form-div-size form-border">
+        <!--Text section-->
+        <div>
+            <h1>Login Yourself</h1>
+            <p style="margin-top: 4px;">Welcome back User into Event Planner website!</p>
+
+            <!--Form section-->
+            <form method="post" action="{% url 'login'%}">
+                {% csrf_token %}
+                <div>
+
+                    <!--Input Section-->
+                    <div class="top-margin">
+                        <input type="email" name="loginusername" class="input-box" placeholder="Enter email address" minlength="11"
+                            maxlength="30" required="">
+                    </div>
+
+                    <!--Input Section-->
+                    <div class="top-margin">
+                        <input type="password" name="loginpassword" class="input-box" placeholder="Enter correct password"
+                            minlength="4" maxlength="8" required="">
+                    </div>
+
+                    <!-- Sign in Button section-->
+                    <div class="top-margin">
+                        <button type="submit" class="submit-btn">Sign In</button>
+                    </div>
+
+                    <div class="top-margin">
+                        <small>
+                            Don’t have an account? <a href="{% url 'registration' %}" class="link-css "> SignUp</a>
+                        </small>
+                    </div>
+
+                    <!--
+                                    <div class="top-margin">
+                    <div style="float: right; margin-bottom: 10px;"> 
+                        <small>Forgot password?<a href="{% url 'forget' %}" class="link-css">  Reset It</a></small>
+                    </div>
+                </div>
+                -->
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-img-div">
+        <img src="/Static/icons/love-birds.png" alt="" class="img100">
+    </div>
+</div>
+
+{% include 'Footer.html' %}

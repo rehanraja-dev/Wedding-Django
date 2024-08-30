@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: proxima-nova, sans-serif;
+}
+.display-none
+{
+    display: none;
+}
+.blur {
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.root-container {
+    margin-left: 100px;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.img100 {
+    width: 100%;
+    height: 100%;
+}
+
+.image20 {
+    width: 20px;
+    height: 20px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.bidget-div {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(234, 52, 140);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -15px;
+}
+
+.bidget-div-p {
+    color: white;
+}
+.HEADER {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0px 1px 5px 0px gray;
+    padding: 0px 25px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.BRAND {
+    padding: 0px 0px;
+}
+
+.brand-text {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Sora', sans-serif;
+}
+
+.MENU {
+    margin: 0px Opx;
+    padding: 0px 0px;
+}
+
+.MENU ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MENU ul li {
+    padding: 30px 0px;
+}
+
+.MENU ul li:hover {
+    font-weight: 600;
+    border-bottom: 5px solid black;
+}
+
+.MENU ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17;
+    padding: 30px 10px;
+}
+
+.DROPDOWN {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: 0px 1px 5px 0px gray;
+}
+
+.MENU ul li:hover .DROPDOWN {
+    display: block;
+    display: flex
+}
+
+.a-container {
+    display: block;
+}
+
+.username {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0px 0px 10px;
+}
+
+/* MENU ICONS DIV CSS */
+.icon_con {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon {
+    background-color: white;
+    margin: 0px 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.icon:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0px 1px 5px 0px black;
+}
+
+.icon-img {
+    width: 35px;
+    height: 35px;
+}
+
+/**/
+.dropdown-header {
+    position: relative;
+    margin-top: 10px;
+    width: 45%;
+    height: 100px;
+    margin: 0px 420px;
+    background-color: #f2f2f2;
+    text-align: center;
+}

@@ -1,0 +1,99 @@
+{% include "Header.html" %}
+
+{% include "Message.html" %}
+<div style="display: flex; justify-content: flex-end; margin: 20px 150px 20px 0px;">
+    <p>PROFILE PAGE</p>
+</div>
+
+<!-- PROFILE PAGE FOR USER. HERE USER CAN SEE THIER BOOKING . -->
+{% if user_manager %}
+<div style="width:80%; margin:auto; background-color: white; border-radius: 10px; padding: 20px 50px;">
+    <div style="width: 100%;display: flex; padding: 10px 0px; border-bottom: 1px solid gray; justify-content: space-between;">
+        <p style="width:30px">No.</p>
+        <p style="width: 200px; color: #4a4a4a;">Mamnager name</p>
+        <p style="width: 200px; color: #4a4a4a;">Contact</p>
+        <p style="width: 200px; color: #4a4a4a;">City</p>
+        <p style="width: 200px; color: #4a4a4a;">State</p>
+        <p style="width: 200px; color: #4a4a4a;">BOOKING DATE</p>
+        <p style="width: 200px; color: #4a4a4a;">STATUS</p>
+    </div>
+    {% for i in user_manager %}
+    <div style="display: flex; border-bottom: 1px solid gray; padding: 20px 0px; align-items: center;">
+        <p style="width:30px; font-size: 15px;">{{forloop.counter}}</p>
+        <p style="width: 180px; font-size: 15px;">{{i.manager.user.first_name}}</p>
+        <p style="width: 185px; font-size: 15px; ">{{i.manager.mobile}}</p>
+        <p style="width: 185px; font-size: 15px; ">{{i.manager.city}}</p>
+        <p style="width: 180px; font-size: 15px;">{{i.manager.state}}</p>
+
+        <p style="width: 200px; font-size: 15px;">{{i.order_date}}</p>
+        <p >
+            {% if i.status %} 
+            <p style="background-color: rgb(44, 203, 44); padding: 5px 10px; border-radius: 5px; color: white;">Available</p> 
+            {% else %} 
+            <p style="background-color: rgb(224, 35, 35); padding: 5px 10px; border-radius: 5px; color: white;">Unavaible</p> 
+            {% endif %}
+        </p>
+    </div>
+    {% endfor %}
+</div>
+
+<div style="width:80%; margin:auto; background-color: white; border-radius: 10px; padding: 20px 50px; margin-top: 10px;">
+    <div style="display: flex; padding: 10px 0px; border-bottom: 1px solid gray; ">
+        <p style="width:30px">No.</p>
+        <p style="width: 200px; color: #4a4a4a;">Vender name</p>
+        <p style="width: 200px; color: #4a4a4a;">Contact</p>
+        <p style="width: 200px; color: #4a4a4a;">City</p>
+        <p style="width: 200px; color: #4a4a4a;">State</p>
+        <p style="width: 200px; color: #4a4a4a;">Status</p>
+    </div>
+    {% for i in venders %}
+    <div style="display: flex; border-bottom: 1px solid gray; padding: 20px 0px; align-items: center;">
+        <p style="width:30px; font-size: 15px;">{{forloop.counter}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.vender.vender_name}}</p>
+        <p style="width: 200px; font-size: 15px; ">{{i.vender.mobile}}</p>
+        <p style="width: 200px; font-size: 15px; ">{{i.vender.city}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.vender.state}}</p>
+        {% if i.status %} 
+        <p style="background-color: rgb(44, 203, 44); padding: 5px 10px; border-radius: 5px; color: white;">Available</p> 
+        {% else %} 
+        <p style="background-color: rgb(224, 35, 35); padding: 5px 10px; border-radius: 5px; color: white;">Unavaible</p> 
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+
+<!-- PROFILE PAGE FOR MANAGER OR PLANNER. HERE MANAGER CAN SEE WHO BOOKED HIM FOR THIER WEDDING. -->
+{% if manager %}
+<div style="width:80%; margin:auto; background-color: white; border-radius: 10px; padding: 20px 50px; ">
+    <div style="display: flex; padding: 10px 0px; border-bottom: 1px solid gray; ">
+        <p style="width:30px">No.</p>
+        <p style="width: 200px; color: #4a4a4a;">CUSTOMER NAME</p>
+        <p style="width: 200px; color: #4a4a4a;">CUSTOMER CONTACT</p>
+        <p style="width: 220px; color: #4a4a4a;">BOOKING DATE</p>
+        <p style="width: 100px; color: #4a4a4a;">DETAILS</p>
+        <p style="width: 200px; color: #4a4a4a;">STATUS</p>
+    </div>
+    {% for i in manager %}
+    <div style="display: flex; border-bottom: 1px solid gray; padding: 20px 0px; align-items: center;">
+        <p style="width:30px; font-size: 15px;">{{forloop.counter}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.user.first_name}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.user.email}}</p>
+        <p style="width: 220px; font-size: 15px;">{{i.order_date}}</p>
+        <p style="width: 100px; font-size: 15px;">
+            <a href="{% url 'detailsofsevices' i.mb_id %}" style="text-decoration: none; color: #4a4a4a;">Details</a>
+        </p>
+        <p >
+            {% if i.status %} 
+            <p style="background-color: rgb(44, 203, 44); padding: 5px 10px; border-radius: 5px; color: white;">Available</p> 
+            {% else %} 
+            <p>Unavaible</p> 
+            {% endif %}
+        </p>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% include "Footer.html" %}

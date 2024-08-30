@@ -1,0 +1,158 @@
+.venue-card-container {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.venue-card-title {
+    width: 400px;
+    padding: 0px 0px 10px 10px;
+}
+
+.venue-card-title-p {
+    font-size: 22px;
+}
+
+.venue-card {
+    width: 400px;
+    min-width: 270px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+.venue-card:hover {
+    box-shadow: 1px 1px 5px 0px gray;
+}
+
+.venue-img-div {
+    height: 180px;
+    width: 380px;
+}
+
+.venue-img {
+    border-radius: 10px 10px 0px 0px;
+    position: static;
+}
+
+.place-review {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.venue-name {
+    color: #4a4a4a;
+    font-weight: 550;
+    font-size: 18px;
+}
+
+.rating-div {
+    display: flex;
+}
+
+.reviews {
+    font-size: 15px;
+    color: #4a4a4a;
+
+}
+
+.location-type {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.location-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.type-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.veg-nonveg {
+    display: flex;
+    margin-top: 15px;
+}
+
+.veg-div {
+    margin: 0px 30px 0px 0px;
+}
+
+.small-title {
+    font-size: 15px;
+    margin: 4px 0px;
+    color: #4a4a4a;
+}
+
+.big-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.room-div {
+    margin-top: 15px;
+    background-color: #f2f2f2;
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.room-text {
+    font-size: 15px;
+
+}
+
+/**/
+.delete-div {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    margin-top: 10px;
+   
+}
+
+.delete-link {
+    padding: 7px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.delete-link:hover {
+    box-shadow: 0px 1px 5px 0px gray;
+    padding: 5px;
+}
+
+.book-btn {
+    text-decoration: none;
+    background-color: rgb(249, 54, 132);
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: 0px;
+    cursor: pointer;
+}
+.book-btn:hover{
+    box-shadow: 0px 1px 5px 0px rgb(26, 26, 26);
+    font-size: 18px;
+
+}
+
+.jc-fe {
+    justify-content: end;
+}
+
+.jc-sa {
+    justify-content: space-between;
+}

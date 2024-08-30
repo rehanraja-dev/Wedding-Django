@@ -1,0 +1,57 @@
+{% include "Header.html" %}
+
+<div style="display: flex; justify-content: flex-end; margin: 20px 150px 20px 0px;"">
+    <p>SERVICE DETAILS PAGE</p>
+</div>
+
+<div style="width:80%; margin:auto; background-color: white; border-radius: 10px; padding: 20px 50px;">
+    <div style="display: flex; padding: 10px 0px; border-bottom: 1px solid gray; ">
+        <p style="width:30px">No.</p>
+        <p style="width: 200px; color: #4a4a4a;">VENDER NAME</p>
+        <p style="width: 200px; color: #4a4a4a;">VENDER CONTACT</p>
+        <p style="width: 100px; color: #4a4a4a;">CITY</p>
+        <p style="width: 200px; color: #4a4a4a;">STATE</p>
+        <p style="width: 200px; color: #4a4a4a;">STATUS</p>
+    </div>
+    {% for i in vender %}
+    <div style="display: flex; border-bottom: 1px solid gray; padding: 20px 0px; align-items: center;">
+        <p style="width:30px; font-size: 15px;">{{forloop.counter}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.vender.vender_name}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.vender.mobile}}</p>
+        <p style="width: 100px; font-size: 15px;">{{i.vender.city}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.vender.state}}</p>
+        {% if i.status %} 
+        <p style="background-color: rgb(44, 203, 44); padding: 5px 10px; border-radius: 5px; color: white;">Available</p> 
+        {% else %} 
+        <p style="background-color: rgb(224, 35, 35); padding: 5px 10px; border-radius: 5px; color: white;">Unavaible</p> 
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div style="width:80%; margin:auto; background-color: white; border-radius: 10px; padding: 20px 50px;">
+    <div style="display: flex; padding: 10px 0px; border-bottom: 1px solid gray; ">
+        <p style="width:30px">No.</p>
+        <p style="width: 200px; color: #4a4a4a;">Venue name</p>
+        <p style="width: 200px; color: #4a4a4a;">Contact</p>
+        <p style="width: 100px; color: #4a4a4a;">City</p>
+        <p style="width: 200px; color: #4a4a4a;">State</p>
+        <p style="width: 200px; color: #4a4a4a;">Status</p>
+    </div>
+    {% for i in venue %}
+    <div style="display: flex; border-bottom: 1px solid gray; padding: 20px 0px; align-items: center;">
+        <p style="width:30px; font-size: 15px;">{{forloop.counter}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.venue.venue_name}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.venue.mobile}}</p>
+        <p style="width: 100px; font-size: 15px;">{{i.venue.city}}</p>
+        <p style="width: 200px; font-size: 15px;">{{i.venue.state}}</p>
+        {% if i.status %} 
+        <p style="background-color: rgb(44, 203, 44); padding: 5px 10px; border-radius: 5px; color: white;">Available</p> 
+        {% else %} 
+        <p style="background-color: rgb(224, 35, 35); padding: 5px 10px; border-radius: 5px; color: white;">Unavaible</p> 
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{% include "Footer.html" %}

@@ -1,0 +1,357 @@
+<!--Header-->
+{% include "Header.html" %}
+
+<div style="display: flex; justify-content: flex-end; margin-right: 150px; margin-top: 20PX;">
+    <p>VENDER PAGE</p>
+</div>
+
+<!--Wedding venders categories-->
+<div class="card3-container">
+
+    <div class="card3-clone">
+        <div>
+            <p class="proxima-nova F-22">Wedding Categories</p>
+        </div>
+    </div>
+
+    <div class="card3-clone">
+
+    </div>
+
+    <!-- CAKES -->
+    <div class="card3" style="background-color: #D8DFFC;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#cakes" style="text-decoration: none; color: black;" class="f-20" >Wedding Cake</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Black Forest, Vanilla, Chocolate, Blueberry, Strawberry</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://th.bing.com/th/id/OIP.Sqnw7eVF6h9npp_WWpNKQgHaE7?pid=ImgDet&rs=1" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <!-- PHOTOGRAPHERS -->
+    <div class="card3" style="background-color: #F4D5C2;">
+        <div class="card3-info">
+          <div style="margin: 30px 0px 10px 20px;">
+            <a href="#photographers" style="text-decoration: none; color: black;" class="f-20" >Photographer</a>
+          </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Photographers, Cinema/Video</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://th.bing.com/th/id/OIP.AuLRqhLa1h-sPLg0r_DzAgHaE8?pid=ImgDet&rs=1" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <!-- MAKEUP ARTIST -->
+    <div class="card3" style="background-color: #DFB2AD;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#makeup" style="text-decoration: none; color: black;" class="f-20">Makeup</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Bridal Makeup, Family Makeup</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/3/makeup.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <!-- MEHNDI ARTIST -->
+    <div class="card3" style="background-color:  #CFCDB8;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#mehndi" style="text-decoration: none; color: black;" class="f-20">Mehndi</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Mehendi Artist</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/6/mehendi-artists.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <!-- BRIDAL WEAR -->
+    <div class="card3" style="background-color: #DCF7F7;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#bridal" style="text-decoration: none; color: black;" class="f-20">Bridal wear</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Bridal Lehengas, Kanjeevaram / Silk
+                Saree</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/4/bridal-wear.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <!-- GROOM WEAR -->
+    <div class="card3" style="background-color:  #d0b8a9;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#groom" style="text-decoration: none; color: black;" class="f-20">Groom Wear</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Sherwani, Wedding Suits / Tuxes, Sherw</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://cdn0.weddingwire.in/article/3996/3_2/960/jpg/16993-indian-groom-wedding-dress-coolbluez-photography-lead.jpeg"
+                alt="" class="img100 border-radius-5">
+        </div>
+    </div>
+</div>
+
+<!--Cakes-->
+<div id="cakes" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container" >
+
+    <div class="cake-card-copy">
+        <p class="venue-card-title-p">Wedding Cakes</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{blackforest_count}} results of black forest
+        </p>
+    </div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+
+    {% for i in blackforest %}
+    <div class="cake-card">
+
+        <div class="cake-img-div">
+            <a href="{% url 'cakeDtls' i.cake_id %}">
+                <img src="{{i.image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.cake_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.provider.city}}, {{i.provider.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Photographers-->
+<div id="photographers" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container" >
+
+    <div class="vender-card-title" id="photographers">
+        <p class="venue-card-title-p">Photographers</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{photographers_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in photographers %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Mackup Artist-->
+<div id="makeup" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Makeup Artist</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{MakeupArtists_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in MackeupArtists %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Mehndi Artist-->
+<div id="mehndi" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container" id="mehndi">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Mehndi Artist</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{MehndiArtist_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in MehndiArtist %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Bridal Wear-->
+<!--
+    <div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Bridal Wear</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{photographers_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in bridalwear %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+-->
+
+<!--Groom Wear-->
+<!--
+    <div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Groom Wear</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{photographers_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in groomwear %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+-->
+
+<!--Footer-->
+{% include "Footer.html" %}

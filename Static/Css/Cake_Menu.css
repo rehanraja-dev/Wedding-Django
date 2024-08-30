@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+    align-items: baseline;
+    height: 40px;
+}
+  
+li {
+    font-family: 'Sora', sans-serif;
+}
+
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #111;
+}
+
+.container-back{
+    height: inherit;
+    position: absolute;
+    left: 2%;
+    margin: 0;
+}
+
+.contains-shop-user{
+    height: inherit;
+    position: absolute;
+    right: 10%;
+}
+
+.f-s-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.first-half{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #383737;
+    width: 35%;
+    height: 700px;
+}
+
+.second-half{
+    background-color: bisque;
+    width: 65%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.menu-icon-msg{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 20%;
+}
+
+#menu-msg{
+    font-family: 'Lobster', cursive;
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+.cake-type-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    width: 80%;
+    align-items: center;
+    row-gap: 5%;
+}
+
+.btn {
+    background-color: #111;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    text-align: center;
+    height: 15%;
+}
+
+.btn:hover{
+    text-decoration: underline;
+    width: 90%;
+    transition: 500ms;
+}
+
+.btn:active{
+    background-color: #333;
+}
+
+#type-li:hover{
+    text-decoration: underline;
+    transition: 3000ms;
+}
+
+.cake-info-container{
+    width: 80%;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cake-name-img{
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0 0 20px;
+    text-align: center;
+}
+
+#cake-img{
+    display: block;
+    width: 80%;
+    height: 50%;
+    border-radius: 20px;
+    margin: 5% auto 0 auto;
+    box-shadow: 0 3px 4px #333;
+}
+
+#cake-name{
+    margin-top: 5%;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+    color: #333;
+}
+
+.cake-desc{
+    width: 30%;
+    height: 100%;
+    background-color: floralwhite;
+    padding: 20px 10px 10px 10px;
+    border-radius: 0 20px 20px 0;
+}
+
+.cake-desc p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+.price-buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    column-gap: 20%;
+    height: 20%;
+}
+
+.price-buy span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color:#333
+}
+
+#buy-now-btn{
+    width: 40%;
+    height: 50%;
+    color: whitesmoke;
+    background-color: #0f0e0e;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+#buy-now-btn:hover{
+    width: 43%;
+    height: 53%;
+    box-shadow: 0 3px 4px #333;
+    transition: 200ms;
+}
+#buy-now-btn:active{
+    background-color: cadetblue;
+}

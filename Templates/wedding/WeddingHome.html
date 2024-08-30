@@ -1,0 +1,519 @@
+<!-- HEADER CODE -->
+{% include "Header.html" %}
+
+<!--HOME PAGE CODE-->
+<div class="HOME-IMAGES">
+
+    <!-- HOME TITLE -->
+    <div class="title-div">
+        <p class="wedding-title">SEARCH YOUR HOME CITY FOR WEDDING SERVICES.</p>
+    </div>
+
+    <!-- SEARCH DIV -->
+    <div class="search-div">
+        <form action="{% url 'search' %}" style="display: flex;; align-items: center;" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Seach" name="search_value" class="search-input">
+            <button class="search-button" type="submit">
+                <img src="/Static/icons/search.png" alt="close" class="search-btn-img">
+            </button>
+        </form>
+    </div>
+
+    <!-- HOME SEARCH SUGGETIONS DIV-->
+    <div class="search-dropdown" id="search">
+        <div style="display: flex;">
+            <!-- COLOMN FIRST -->
+            <div class="search-drop-div">
+                <p class="search-div-title">Venues</p>
+
+                <div class="search-item-div"><a href="" class="search-link">5 Star Hotels</a></div>
+                <div class="search-item-div"><a href="" class="search-link">Lawns / Farmhouses</a></div>
+                <div class="search-item-div"><a href="" class="search-link">Resorts</a></div>
+            </div>
+
+            <!-- COLOMN SECOND -->
+            <div class="search-drop-div bc-white">
+                <p class="search-div-title">Photographers</p>
+                <div class="search-item-div"><a href="{% url 'search' %}" class="search-link">Photographers</a></div>
+
+                <p class="search-div-title margin-top-10">Mehndi Artist</p>
+                <div class="search-item-div"><a href="{% url 'search' %}" class="search-link">Mehndi Artist</a>
+                </div>
+            </div>
+
+            <!-- COLOMN THIRD -->
+            <div class="search-drop-div">
+                <p class="search-div-title">Makeup Artist</p>
+
+                <div class="search-item-div"><a href="" class="search-link">Groom </a></div>
+                <div class="search-item-div"><a href="" class="search-link">Bride</a></div>
+
+                <p class="search-div-title margin-top-10">Mehndi Artist</p>
+                <div class="search-item-div"><a href="" class="search-link">Mehndi Artist </a></div>
+            </div>
+
+            <!-- CLOSE BUTTON -->
+            <div style="margin:10px 20px 0px 0px">
+                <img src="/Static/icons/close.png" alt="" class="image20" onclick="closesearch()">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ALL CATEGORIES CARD -->
+<div class="card3-container">
+
+    <div class="card3-clone">
+        <div>
+            <p class="proxima-nova F-22">Wedding Categories</p>
+        </div>
+    </div>
+    <div class="card3-clone"></div>
+
+    <div class="card3" style="background-color: #cef6c0;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#5star" style="text-decoration: none; color: black;" class="f-20">Venues</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Hotels</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://i.pinimg.com/originals/39/53/61/3953613e0ca7ceca04d2bf59327132bc.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color: #D8DFFC;">
+        <div class="card3-info">
+
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#lawn" style="text-decoration: none; color: black;" class="f-20">Venues</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Lawns/Farmhouses</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://katihewitt.com/wp-content/uploads/2019/07/13-The-Farmhouse-Wedding.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color: #efcfa3;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#resort" style="text-decoration: none; color: black;" class="f-20">Venues</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Resorts</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://th.bing.com/th/id/OIP.Sqnw7eVF6h9npp_WWpNKQgHaE7?pid=ImgDet&rs=1" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color: #F4D5C2;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#photographers" style="text-decoration: none; color: black;" class="f-20">Photographers</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Photographers, Cinema/Video</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://th.bing.com/th/id/OIP.AuLRqhLa1h-sPLg0r_DzAgHaE8?pid=ImgDet&rs=1" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color: #DFB2AD;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#makeup" style="text-decoration: none; color: black;" class="f-20">Makeup Artist</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Bridal Makeup, Family Makeup</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/3/makeup.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color:  #CFCDB8;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#mehndi" style="text-decoration: none; color: black;" class="f-20">Mehndi Artist</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Mehendi Artist</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/6/mehendi-artists.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color: #DCF7F7;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#bridal" style="text-decoration: none; color: black;" class="f-20">Bridal Wear</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Bridal Lehengas, Kanjeevaram / Silk
+                Saree</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://image.wedmegood.com/resized/250X/uploads/m_v_cat_image/4/bridal-wear.jpg" alt=""
+                class="img100 border-radius-5">
+        </div>
+    </div>
+
+    <div class="card3" style="background-color:  #d0b8a9;">
+        <div class="card3-info">
+            <div style="margin: 30px 0px 10px 20px;">
+                <a href="#groom" style="text-decoration: none; color: black;" class="f-20">Groom Wear</a>
+            </div>
+            <small class="proxima-nova" style="margin: 0px 0px 0px 20px;">Sherwani, Wedding Suits / Tuxes, Sherw</small>
+        </div>
+        <div class="card3-image">
+            <img src="https://cdn0.weddingwire.in/article/3996/3_2/960/jpg/16993-indian-groom-wedding-dress-coolbluez-photography-lead.jpeg"
+                alt="" class="img100 border-radius-5">
+        </div>
+    </div>
+</div>
+
+<!-- 5 STAR HOTEL-->
+<div id="5star" style="height: 60px; width: 100%;"></div>
+<div class="venue-card-container">
+
+    <div class="venue-card-title">
+        <p class="venue-card-title-p">Available 5 Star Hotels</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{hotel_count}} results of 5 star hotels</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in hotels %}
+    <div class="venue-card">
+
+        <div class="venue-img-div">
+            <a href="{% url 'venueDtls' i.venue_id %}">
+                <img src="{{i.venue_image.url}}" alt="venue image" class="img100 venue-img">
+            </a>
+        </div>
+    
+        <div class="place-review">
+            <p class="venue-name">{{i.venue_name}}</p>
+    
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+    
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+    
+            <div class="type-div">
+                <img class="image20 margin-right-10" src="/Static/icons/building.png" alt="property-img">
+                <p>{{i.Venue_Type.venue_type}}</p>
+            </div>
+        </div>
+    
+        <div class="veg-nonveg">
+            <div class="veg-div">
+                <p class="small-title">Veg</p>
+                <p class="big-text">₹ {{i.veg_price}} / plate</p>
+            </div>
+    
+            <div class="nonveg-div">
+                <p class="small-title">Non-Veg</p>
+                <p class="big-text">₹ {{i.nonveg_price}} / plate</p>
+            </div>
+        </div>
+    
+    </div>
+    {% endfor %}
+</div>
+
+<!-- LAWN / FARMHOUSE -->
+<div id="lawn" style="height: 60px; width: 100%;"></div>
+<div class="venue-card-container" >
+
+    <div class="venue-card-title">
+        <p class="venue-card-title-p">Available Lawn / Farmhouse</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{lawn_count}} results of Farmhouses / lawn</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in lawns %}
+    <div class="venue-card">
+
+        <div class="venue-img-div">
+            <a href="{% url 'venueDtls' i.venue_id %}">
+                <img src="{{i.venue_image.url}}" alt="venue image" class="img100 venue-img">
+            </a>
+        </div>
+    
+        <div class="place-review">
+            <p class="venue-name">{{i.venue_name}}</p>
+    
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+    
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+    
+            <div class="type-div">
+                <img class="image20 margin-right-10" src="/Static/icons/building.png" alt="property-img">
+                <p>{{i.Venue_Type.venue_type}}</p>
+            </div>
+        </div>
+    
+        <div class="veg-nonveg">
+            <div class="veg-div">
+                <p class="small-title">Veg</p>
+                <p class="big-text">₹ {{i.veg_price}} / plate</p>
+            </div>
+    
+            <div class="nonveg-div">
+                <p class="small-title">Non-Veg</p>
+                <p class="big-text">₹ {{i.nonveg_price}} / plate</p>
+            </div>
+        </div>
+    
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Resort -->
+<div id="lawn" style="height: 60px; width: 100%;"></div>
+<div class="venue-card-container" >
+
+    <div class="venue-card-title">
+        <p class="venue-card-title-p">Available Resort</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{resort_count}} results of Resort</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in resorts %}
+    <div class="venue-card">
+
+        <div class="venue-img-div">
+            <a href="{% url 'venueDtls' i.venue_id %}">
+                <img src="{{i.venue_image.url}}" alt="venue image" class="img100 venue-img">
+            </a>
+        </div>
+    
+        <div class="place-review">
+            <p class="venue-name">{{i.venue_name}}</p>
+    
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+    
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+    
+            <div class="type-div">
+                <img class="image20 margin-right-10" src="/Static/icons/building.png" alt="property-img">
+                <p>{{i.Venue_Type.venue_type}}</p>
+            </div>
+        </div>
+    
+        <div class="veg-nonveg">
+            <div class="veg-div">
+                <p class="small-title">Veg</p>
+                <p class="big-text">₹ {{i.veg_price}} / plate</p>
+            </div>
+    
+            <div class="nonveg-div">
+                <p class="small-title">Non-Veg</p>
+                <p class="big-text">₹ {{i.nonveg_price}} / plate</p>
+            </div>
+        </div>
+    
+    </div>
+    {% endfor %}
+</div>
+
+<!--Photographers-->
+<div id="photographers" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container" >
+
+    <div class="vender-card-title" id="photographers">
+        <p class="venue-card-title-p">Photographers</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{photographers_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in photographers %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Mackup Artist-->
+<div id="makeup" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Makeup Artist</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{MakeupArtists_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in MackeupArtists %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Mehndi Artist-->
+<div id="mehndi" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container" id="mehndi">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Mehndi Artist</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{MehndiArtist_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in MehndiArtist %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!--Cakes-->
+<div id="cakes" style="height: 60px; width: 100%;"></div>
+<div class="vender-card-container" >
+
+    <div class="cake-card-copy">
+        <p class="venue-card-title-p">Wedding Cakes</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{blackforest_count}} results of black forest
+        </p>
+    </div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+
+    {% for i in blackforest %}
+    <div class="cake-card">
+
+        <div class="cake-img-div">
+            <a href="{% url 'cakeDtls' i.cake_id %}">
+                <img src="{{i.image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.cake_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.provider.city}}, {{i.provider.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<!-- FOOTER CODE -->
+{% include "Footer.html" %}

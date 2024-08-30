@@ -1,0 +1,143 @@
+{% include 'Header.html' %}
+
+<div style="display: flex; justify-content: flex-end; margin-right: 150px; margin-top: 20PX;">
+    <p>SEARCH PAGE</p>
+</div>
+
+
+<div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Venders</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{photographers_count}} results as per your search criteria
+        </p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in searchvender %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="{% url 'venderDtls' i.vender_id %}">
+                <img src="{{i.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+<div class="venue-card-container">
+
+    <div class="venue-card-title">
+        <p class="venue-card-title-p">Venues</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{venue_count}} results as per your search criteria</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in searchvenue %}
+    <div class="venue-card">
+
+        <div class="venue-img-div">
+            <a href="{% url 'venueDtls' i.venue_id %}">
+                <img src="{{i.venue_image.url}}" alt="venue image" class="img100 venue-img">
+            </a>
+        </div>
+    
+        <div class="place-review">
+            <p class="venue-name">{{i.venue_name}}</p>
+    
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+    
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.state}}</p>
+            </div>
+    
+            <div class="type-div">
+                <img class="image20 margin-right-10" src="/Static/icons/building.png" alt="property-img">
+                <p>{{i.Venue_Type.venue_type}}</p>
+            </div>
+        </div>
+    
+        <div class="veg-nonveg">
+            <div class="veg-div">
+                <p class="small-title">Veg</p>
+                <p class="big-text">₹ {{i.veg_price}} / plate</p>
+            </div>
+    
+            <div class="nonveg-div">
+                <p class="small-title">Non-Veg</p>
+                <p class="big-text">₹ {{i.nonveg_price}} / plate</p>
+            </div>
+        </div>
+    
+    </div>
+    {% endfor %}
+</div>
+
+<!--Cakes-->
+<div class="vender-card-container" >
+
+    <div class="cake-card-copy">
+        <p class="venue-card-title-p">Wedding Cakes</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{blackforest_count}} results of black forest
+        </p>
+    </div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+
+    {% for i in searchcake %}
+    <div class="cake-card">
+
+        <div class="cake-img-div">
+            <a href="{% url 'cakeDtls' i.cake_id %}">
+                <img src="{{i.image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.cake_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.provider.city}}, {{i.provider.state}}</p>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+{% include 'Footer.html' %}

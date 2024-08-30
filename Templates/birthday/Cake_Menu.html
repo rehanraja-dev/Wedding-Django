@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="/Static/Css/style.css">
+    <link rel="stylesheet" href="/Static/Css/Cake_Menu.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+    <header class="nav-bar">
+        <ul>
+
+            <div class="container-back">
+                <ul>
+                    <li id="arrow-icon"><a href="{% url 'cakes' %}"><img src="/Static/icons/left-arrow.png" alt="arrow-img"></a></li>
+                </ul>
+            </div>
+
+            <div class="contains-shop-user">
+                <ul>
+                    <li id="user-icon"><a href="{% url 'profile' %}"><img src="/Static/icons/user-img.png" alt="user-img"></a></li>
+                    <li id="shop-icon"><a href="{% url 'cart' %}"><img id="shop-icon" src="/Static/icons/shopping-bag.png" alt="shop-img"></a></li>
+                </ul>
+            </div>
+
+        </ul> 
+        
+    </header>
+    
+    <div class="f-s-container">
+        <div class="first-half">
+
+            <div class="menu-icon-msg">
+                <img id="menu-icon" src="/Static/icons/menu-icon.png" alt="menu icon">
+                <span id="menu-msg">Menu</span>
+            </div>
+
+            <div class="cake-type-list">
+                <button class="btn" onclick="black()">Black Forest Cake</button>
+                <button class="btn" onclick="red()">Red Velvet Cake</button>
+                <button class="btn" onclick="cup()">Cupcakes</button>
+                <button class="btn" onclick="sponge()">Sponge Cakes</button>
+                <button class="btn" onclick="choco()">Chocolate Cake</button>
+                <button class="btn" onclick="straw()">Strawberry Shortcake</button>
+                <button class="btn" onclick="white()">White Cake</button>
+            </div>
+    
+        </div>
+    
+        <div class="second-half">
+
+            <div class="cake-info-container">
+                
+                <div class="cake-name-img">
+
+                    <img id="cake-img" src="/Static/Images/Black-Forest-Cake.webp">
+                    <h3 id="cake-name">Black Forest Cake</h3>
+
+                    <div class="price-buy">
+                        <span>Price : <span id="set-price">(₹350)</span> </span>
+                        <button id="buy-now-btn">Buy</button>
+                    </div>
+
+                </div>
+                
+                <div class="cake-desc">
+                    <p id="para-cake">
+                        Black forest cake is perhaps one of the most sumptuous desserts on the planet.
+                        <br>
+                        <br>
+                        It has layers of fluffy chocolate sponge, whipped cream, and a cherry filling.
+                        <br>
+                        <br>
+                        This cake is infused with cherry liqueur, bringing a richer and deeper flavor.
+                        <br>
+                        <br>
+                        The combination is nothing short of heavenly!
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/Static/javascript/cake-menu.js"></script>
+
+
+</body>
+</html>

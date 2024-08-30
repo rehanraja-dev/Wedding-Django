@@ -1,0 +1,93 @@
+.vender-card-container
+{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.vender-card-title
+{
+    width: 400px;
+    padding: 0px 0px 10px 10px;
+}
+.photographer-card-title-p
+{
+    font-size: 22px;
+}
+.vender-card{
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+.vender-card:hover
+{
+    box-shadow: 0px 1px 5px 0px gray;
+}
+.vender-img-div{
+    height: 180px;
+    width: 380px;
+}
+.venue-name
+{
+    color: #4a4a4a;
+    font-weight: 550;
+    font-size: 18px;
+}
+.reviews
+{
+    font-size: 15px;
+    color: #4a4a4a;
+
+}
+.location-div
+{
+    display: flex;
+    justify-content: space-between;
+}
+.type-div
+{
+    display: flex;
+    justify-content: space-between;
+}
+.price-mobile
+{
+    display: flex;
+    margin-top: 15px;
+}
+.price-div
+{
+    margin: 0px 30px 0px 0px;
+    /* display: flex; */
+    align-items: center;
+}
+
+.small-title
+{
+    font-size: 15px;
+    margin: 4px 0px;
+    color: #4a4a4a;
+}
+.big-text
+{
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+.room-div
+{
+    background-color: #f2f2f2;
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 5px;
+}
+.room-text
+{
+    font-size: 15px;
+
+}
+
+/**/
+

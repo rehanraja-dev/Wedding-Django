@@ -1,0 +1,52 @@
+.card3-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.card3
+{
+    max-width: 600px;
+    max-height: 130px;
+    width: 600px;
+    height: 130px;
+    display: flex;
+    border-radius: 5px;
+    margin: 7.5px 10px;
+}
+.card3-clone
+{
+    max-width: 600px;
+    max-height: 100px;
+    width: 600px;
+    height: 30px;
+    margin: 1px 10px;
+    display: flex;
+    align-items: center;
+}
+.card3-info
+{
+    width: 350px;
+    padding: 0px 30px;
+}
+.card3-image
+{
+    width: 250px;
+}
+.border-radius-5
+{
+    border-radius: 5px;
+}
+.proxima-nova
+{
+    font-family: proxima-nova, sans-serif;
+}
+.f-20
+{
+    font-size: 20px;
+}
+.F-22
+{
+    font-size: 22px;
+}

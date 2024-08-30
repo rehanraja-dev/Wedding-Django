@@ -1,0 +1,115 @@
+{% include "Header.html" %}
+
+{% for i in vender_dtls %}
+<!--Container-->
+<div class="detailed-container">
+
+    <!--Colomn 1-->
+    <div class="details-container-col-1">
+
+        <!--Image div-->
+        <div class="venued-img-div">
+            <img src="{{i.vender_image.url}}"
+                alt="venue-image" class="img100">
+        </div>
+
+        <!--Details div-->
+        <div class="venue-details-div">
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <p class="venue-details-title">{{i.vender_name}}</p>
+                    <div class="flex margin-top-10">
+                        <img src="/Static/icons/location.png" alt=""
+                            class="image20 margin-right-10">
+                        <p>{{i.city}}, {{i.state}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex rating-div">
+                        <img src="/Static/icons/star.png" alt="" class="image20">
+                        <p class="rating-p">4.4</p>
+                    </div>
+                    <p class="margin-top-10">100 reviews</p>
+                </div>
+            </div>
+
+            <div class="flex detailed-footer">
+                <div class="flex w-25 border-l">
+                    <img src="/Static/icons/gallery.png" alt="" class="image20">
+                    <p class="detailed-footer-p">100 Photos</p>
+                </div>
+
+                <div class="flex w-25 border-l">
+                    <img src="/Static/icons/review.png" alt="" class="image20">
+                    <p class="detailed-footer-p">Review</p>
+                </div>
+                <div class="flex w-25 border-l">
+                    <a href="{% url 'addvender_towish' i.vender_id %}" style="text-decoration: none; display: flex; align-items: center;">
+                        <img src="/Static/icons/wishlist.png" alt="" class="image20">
+                        <p class="detailed-footer-p">Wishlist</p>
+                    </a>
+                </div>
+                <div class="flex w-25 border-l">
+                    <a href="{% url 'addvender_tocart' i.vender_id %}" style="text-decoration: none; display: flex; align-items: center;">
+                        <img src="/Static/icons/share.png" alt="" class="image20">
+                        <p class="detailed-footer-p">Cart</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Colomn 1 close-->
+
+    <!--Colomn 2-->
+    <div class="details-container-col-2">
+
+        <div class="price-division">
+
+            <div class="price-div-1">
+                <p>Starting Price</p>
+                <div>
+                    <small>pricing info</small>
+                    <img src="/Static/icons/arrow-down.png" alt=""
+                        style="width: 10px; height: 10px;">
+                </div>
+            </div>
+
+            <div class="price-div-2">
+                <div style="width: 50%; align-items: center;">
+                    <p>One day price</p>
+                    <p style="margin-top: 10px;">INR {{i.price}}</p>
+                </div>
+                <div style="width: 50%; align-items: center;">
+                    <p>One hour price</p>
+                    <p style="margin-top: 10px;"></p>
+                </div>
+            </div>
+
+            <div class="price-div-3">
+                <p>Special deal</p>
+                <p></p>
+            </div>
+
+        </div>
+
+        <div class="contact-div">
+            <div class="contact-div-1">
+                <div class="email-div">
+                    <img src="/Static/icons/email.png" alt="" style="width: 25px; height: 25px;">
+                    <p class="contact-text">Send Message</p>
+                </div>
+                <div class="phone-div">
+                    <img src="/Static/icons/phone.png" alt="" style="width: 25px; height: 25px;">
+                    <p class="contact-text">Contact</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Colomn 2 close-->
+
+</div>
+<!--Container close-->
+{% endfor %}
+
+{% include "Footer.html" %}

@@ -1,0 +1,145 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+   
+    <link rel="stylesheet" href="/Static/Css/Header.css">
+    <link rel="stylesheet" href="/Static/Css/Home.css">
+    <link rel="stylesheet" href="/Static/Css/Forms.css">
+    <link rel="stylesheet" href="/Static/Css/VenueDetailed.css">
+    <link rel="stylesheet" href="/Static/Css/WedCategories.css">
+    <link rel="stylesheet" href="/Static/Css/VenueCard.css">
+    <link rel="stylesheet" href="/Static/Css/Cake_card.css">
+    <link rel="stylesheet" href="/Static/Css/PhotographerCard.css">
+    <link rel="stylesheet" href="/Static/Css/Footer.css">
+
+    <script src="/Static/javascript/Timeout.js"></script>
+    <script src="/Static/javascript/OnclickDisplayBlock.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+    <script>
+        function BlurBackground() {
+            var blur = document.getElementById("BLUR");
+            blur.setAttribute('class', 'blur');
+        }
+        function RemoveBlur() {
+            var blur = document.getElementById("BLUR");
+            blur.setAttribute('class', 'root-container');
+        }
+        function opensearch(){
+            var search = document.getElementById("search");
+            search.style.display='block';
+        }
+        function closesearch(){
+            var search = document.getElementById("search");
+            search.style.display='none';
+        }
+    </script>
+</head>
+
+<body style="background-color: #fbfbfb;">
+
+    <!-- HEADER CODES -->
+    <header class="HEADER">
+
+        <!-- BRAND NAME DIV -->
+        <div class="BRAND">
+            <h1><a href="{% url 'home' %}" class="brand-text">Event Planner</a></h1>
+        </div>
+
+        <!-- MENU DIV -->
+        <div class="MENU">
+            <ul>
+                <li>
+                    <a href="{% url 'wedding' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'venues' %}">Venues</a>
+                </li>
+                <li>
+                    <a href="{% url 'venders' %}">Venders</a>
+                </li>
+                <li>
+                    <a href="{% url 'managers' %}">Managers</a>
+                </li>
+
+                <li id="LI">
+                    <a href="{% url 'profile' %}">Account</a>
+                    <div class="dropdown">
+                        <ul>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="{% url 'registration' %}">Register</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="icon_con">
+
+            {% if user.is_authenticated %}
+            <div class="icon">
+                <a href="{% url 'order' %}">
+                    <img src="/Static/icons/order.png" alt="" class="icon-img">
+                </a>
+            </div>
+            {% endif %}
+
+            <div class="icon">
+                <a href="{% url 'wishlist' %}">
+                    <img src="/Static/icons/heart-red.png" alt="" class="icon-img">
+                </a>
+            </div>
+
+            <div class="icon">
+                <a href="{% url 'cart' %}">
+                    <img src="/Static/icons/cart.png" alt="" class="icon-img">
+                </a>
+            </div>
+
+            {% if user.is_authenticated %}
+            <div class="bidget-div">
+                <p class="bidget-div-p">{{total_item}}</p>
+            </div>
+            {% endif %}
+
+            <div class="icon">
+                <a href="{% url 'profile' %}">
+                    <img src="/Static/icons/profile.png" alt="" class="icon-img">
+                </a>
+            </div>
+
+            <div class="username">
+                {% if user.is_authenticated %}
+                Hii. {{user.first_name}}
+                {% endif %}
+            </div>
+        </div>
+    </header>
+

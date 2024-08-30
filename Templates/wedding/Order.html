@@ -1,0 +1,175 @@
+{% include "Header.html" %}
+
+{% include "Message.html" %}
+
+<div style="display: flex; justify-content: flex-end; margin-right: 150px; margin-top: 20PX;">
+    <p>ORDER PAGE</p>
+</div>
+
+<div class="vender-card-container">
+
+    <div class="vender-card-title">
+        <p class="venue-card-title-p">Booked Venders</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{vender_count}} results as per your order contains</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in vender_order %}
+    <div class="vender-card">
+
+        <div class="vender-img-div">
+            <a href="">
+                <img src="{{i.vender.vender_image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.vender.vender_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.vender.state}}</p>
+            </div>
+            <div>
+                <p>{{i.vender.mobile}}</p>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 5px;">
+            {% if i.status %}
+            <div style="background-color: rgb(58, 224, 58); border-radius: 5px;">
+                <p style="color:white; padding: 5px 10px;">Booked</p>
+            </div>
+            {% else %}
+            <div style="background-color: rgb(231, 130, 53); border-radius: 5px;">
+                <p style="color:white; padding: 5px 10px;">Pending</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="venue-card-container">
+
+    <div class="venue-card-title">
+        <p class="venue-card-title-p">Booked Venues </p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{venue_count}} results as per your order contains</p>
+    </div>
+    <div class="venue-card-title"></div>
+    <div class="venue-card-title"></div>
+
+    {% for i in venue_order %}
+    <div class="venue-card">
+
+        <div class="venue-img-div">
+            <a href="">
+                <img src="{{i.venue.venue_image.url}}" alt="venue image" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.venue.venue_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.venue.state}}</p>
+            </div>
+
+            <div class="type-div">
+                <img class="image20 margin-right-10" src="/Static/icons/building.png" alt="property-img">
+                <p>{{i.venue.Venue_Type.venue_type}}</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 10px; margin-left: 10px; display: flex;">
+            <p>{{i.venue.mobile}}</p>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 5px;">
+            {% if i.status %}
+            <div style="background-color: rgb(58, 224, 58); border-radius: 5px;">
+                <p style="color:white; padding: 5px 10px;">Booked</p>
+            </div>
+            {% else %}
+            <div style="background-color: rgb(231, 130, 53); border-radius: 5px;">
+                <p style="color:white; padding: 5px 10px;">Pending</p>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<div class="vender-card-container" >
+
+    <div class="cake-card-copy">
+        <p class="venue-card-title-p">Order Cakes</p>
+        <p style="color:#4a4a4a; margin-top: 10px;">Showing {{cake_count}} results of black forest
+        </p>
+    </div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+    <div class="cake-card-copy"></div>
+
+    {% for i in cake_order %}
+    <div class="cake-card">
+
+        <div class="cake-img-div">
+            <a href="">
+                <img src="{{i.cake.image.url}}" alt="taj-lakefront" class="img100 venue-img">
+            </a>
+        </div>
+
+        <div class="place-review">
+            <p class="venue-name">{{i.cake.cake_name}}</p>
+
+            <div class="rating-div">
+                <img class="image20" src="/Static/icons/star.png" alt="star-rating">
+                <p class="rating-p">4.5</p>
+            </div>
+        </div>
+
+        <div class="location-type">
+            <div class="location-div">
+                <img class="image20 margin-right-10" src="/Static/icons/placeholder.png" alt="location-mark">
+                <p>{{i.cake.provider.city}}, {{i.cake.provider.state}}</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 10px; margin-left: 10px; display: flex;">
+            <p>{{i.cake.provider.mobile}}</p>
+        </div>
+        
+        <div style="display: flex; justify-content: flex-end; margin-top: 5px;">
+            {% if i.status %}
+            <div style="background-color: rgb(58, 224, 58); border-radius: 5px;">
+                <p style="color:white; padding: 5px 10px;">Booked</p>
+            </div>
+            {% else %}
+            <div style="background-color: rgb(231, 130, 53); border-radius: 5px;">
+                <p style="color:white; padding: 5px 10px;">Pending</p>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+{% include "Footer.html" %}
