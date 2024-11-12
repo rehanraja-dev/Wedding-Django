@@ -55,7 +55,15 @@ Website: Visit  http://127.0.0.1:8000/
 Website admin pannel: Visit  http://127.0.0.1:8000/admin
 
 
-Project Structure
+Project folder structure:
+
+Project have 7 main folder and 3 files.
+
+Folder work and containing files are:
+
+1. Cake - This folder is an App in Djnaog used to make seperate models related cake details.
+2. Manager - THis folder is an App in Django used to make seperate models related manager details.
+3. Media - This folder containe some other folders which is used to store media file like images of product images like , venue , vendors , manager , cake.
 core: Contains main Django settings and configuration files.
 accounts: Manages user authentication (registration, login, and logout).
 store: Handles product listings, wishlist, cart, and order management.
