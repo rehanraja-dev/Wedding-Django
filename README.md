@@ -57,23 +57,22 @@ Website admin pannel: Visit  http://127.0.0.1:8000/admin
 
 Project folder structure:
 
-Project have 7 main folder and 3 files.
+Project contain 7 folder and 3 files.
 
 Folder work and containing files are:
 
 1. Cake - This folder is an App in Djnaog used to make seperate models related cake details.
 2. Manager - THis folder is an App in Django used to make seperate models related manager details.
 3. Media - This folder containe some other folders which is used to store media file like images of product images like , venue , vendors , manager , cake.
-core: Contains main Django settings and configuration files.
-accounts: Manages user authentication (registration, login, and logout).
-store: Handles product listings, wishlist, cart, and order management.
-models.py: Defines data models for products, categories, wishlist, cart, orders, and addresses.
-views.py: Manages the logic for displaying products, handling cart actions, and placing orders.
-templates/: Includes HTML templates for different pages, including product listings, cart, checkout, and user profile.
-static/: Contains CSS, JavaScript, and images for frontend styling.
-Customization
-Admin Panel: Use the admin panel to add or update products, categories, and manage orders and customers.
-Frontend Design: Modify HTML, CSS, and JavaScript in the templates/ and static/ directories to update the website’s design and branding.
+4. Static - Contains CSS, JavaScript, and images for frontend styling.
+5. Tables - Contains all basic models of the project.
+6. Templates - Includes HTML templates for different pages, including product listings, cart, checkout, and user profile.
+7. Wedding - Main folder which contian setting.py , views.py and urls.py and others.
+
+8. db.sqlite3 - This is lightweight file based database.
+9. manage.py - 
+10. requirements.txt - Contian all required dependecies with version.
+
 Contributing
 Contributions are welcome! Fork the repository and create a pull request to add features or make improvements.
 
