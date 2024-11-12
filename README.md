@@ -31,26 +31,31 @@ bash - Copy code
 python -m venv env
 
 source env/bin/activate   # On Windows use `env\Scripts\activate`
+
 Install dependencies:
 
-bash
-Copy code
+bash - Copy code
+
 pip install -r requirements.txt
+
 Run migrations to set up the database:
 
-bash
-Copy code
+bash - Copy code
+
 python manage.py migrate
+
 Create a superuser for admin panel access:
 
-bash
-Copy code
+bash - Copy code
+
 python manage.py createsuperuser
+
 Start the development server:
 
-bash
-Copy code
+bash - Copy code
+
 python manage.py runserver
+
 Access the website and admin panel:
 
 eCommerce Website: Visit http://127.0.0.0:8000
