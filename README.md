@@ -79,3 +79,11 @@ Contributions are welcome! Fork the repository and create a pull request to add 
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
+IMPORTANT FOR CONTRIBUTION 
+
+Instruct Contributors to Use Feature Branches: Make it clear in your README.md or a CONTRIBUTING.md file that contributors should:
+
+Fork the repository or clone it and create a new branch for their changes (e.g., feature/xyz).
+Push their branch to the remote repository (not to main).
+Open a pull request (PR) against the main branch for review and merging.
+
