@@ -16,7 +16,7 @@ Database: SQLite (default) or other Django-supported databases
 Authentication: Django's built-in authentication system
 
 
-Setup Instructions - Clone the repository:
+1. Setup Instructions - Clone the repository:
 
 bash - Copy code
 
@@ -24,35 +24,37 @@ git clone https://github.com/amanraja-dev/Wedding-Django.git
 
 cd Wedding-Django
 
-Create a virtual environment:
+2. Create a virtual environment also activate virtual env:
 
 bash - Copy code
 
 python -m venv env
 
-source env/bin/activate   # On Windows use `env\Scripts\activate`
+env\Scripts\activate // Window command
 
-Install dependencies:
+3. Install dependencies: 
 
 bash - Copy code
 
 pip install -r requirements.txt
 
-Create a superuser for admin panel access:
-
-bash - Copy code
-
-python manage.py createsuperuser
-
-Start the development server:
+4. Start the development server:
 
 bash - Copy code
 
 python manage.py runserver
 
-Access the website and admin panel:
+5. Create a superuser for admin panel access:
 
-eCommerce Website: Visit http://127.0.0.0:8000
+bash - Copy code
+
+python manage.py createsuperuser
+
+6. Access the website and admin panel:
+
+Website: Visit http://127.0.0.0:8000
+Website admin pannel: Visit http://127.0.0.0:8000/admin
+
 
 Project Structure
 core: Contains main Django settings and configuration files.
