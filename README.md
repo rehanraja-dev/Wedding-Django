@@ -15,7 +15,6 @@ Frontend: HTML, CSS, JavaScript
 Database: SQLite (default) or other Django-supported databases
 Authentication: Django's built-in authentication system
 
-
 1. Setup Instructions - Clone the repository:
 
 bash - Copy code
@@ -52,8 +51,8 @@ python manage.py createsuperuser
 
 6. Access the website and admin panel:
 
-Website: Visit http://127.0.0.0:8000
-Website admin pannel: Visit http://127.0.0.0:8000/admin
+Website: Visit  http://127.0.0.1:8000/
+Website admin pannel: Visit  http://127.0.0.1:8000/admin
 
 
 Project Structure
