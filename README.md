@@ -14,22 +14,22 @@ Backend: Django (Python)
 Frontend: HTML, CSS, JavaScript
 Database: SQLite (default) or other Django-supported databases
 Authentication: Django's built-in authentication system
-Setup Instructions
-Clone the repository:
 
-bash
 
-Copy code
+Setup Instructions - Clone the repository:
+
+bash - Copy code
 
 git clone https://github.com/amanraja-dev/Wedding-Django.git
 
-cd yourrepository
+cd Wedding-Django
 
 Create a virtual environment:
 
-bash
-Copy code
+bash - Copy code
+
 python -m venv env
+
 source env/bin/activate   # On Windows use `env\Scripts\activate`
 Install dependencies:
 
