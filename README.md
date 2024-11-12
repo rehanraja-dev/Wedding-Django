@@ -38,12 +38,6 @@ bash - Copy code
 
 pip install -r requirements.txt
 
-Run migrations to set up the database:
-
-bash - Copy code
-
-python manage.py migrate
-
 Create a superuser for admin panel access:
 
 bash - Copy code
