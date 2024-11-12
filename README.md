@@ -18,9 +18,13 @@ Setup Instructions
 Clone the repository:
 
 bash
+
 Copy code
+
 git clone https://github.com/amanraja-dev/Wedding-Django.git
+
 cd yourrepository
+
 Create a virtual environment:
 
 bash
