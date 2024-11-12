@@ -81,7 +81,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 IMPORTANT FOR CONTRIBUTION :
 
-Fork the repository or clone it and create a new branch for their changes (e.g., feature/xyz).
-Push their branch to the remote repository (not to main).
-Open a pull request (PR) against the main branch for review and merging.
+1. Fork the repository or clone it and create a new branch for their changes (e.g., feature/xyz).
+2. Push their branch to the remote repository (not to main).
+3. Open a pull request (PR) against the main branch for review and merging.
 
